@@ -617,30 +617,8 @@ header {
 }
 
 .email-submit {
-    display: flex;
-    height: 3.5rem;
-    align-items: center;
-    justify-content: center;
     gap: 0.5rem;
-    border-radius: var(--border-radius-xl);
-    background-color: var(--color-primary);
-    padding: 0 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-white);
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
     white-space: nowrap;
-}
-
-.email-submit:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 15px -3px rgba(180, 33, 4, 0.2);
-}
-
-.email-submit:active {
-    transform: scale(0.95);
 }
 
 .email-submit .material-symbols-outlined {
@@ -989,7 +967,7 @@ footer {
                   required
                   aria-label="Adres email"
                 />
-                <button type="submit" class="email-submit">
+                <button type="submit" class="btn-primary email-submit">
                   Śledź postępy
                   <span class="material-symbols-outlined">arrow_forward</span>
                 </button>
