@@ -37,9 +37,8 @@ $graph = [
             '@type' => 'WebPage',
             '@id' => WIKIZEIT_URL . '#webpage',
             'url' => WIKIZEIT_URL,
-            'isPartOf' => [ '@id' => 'https://jcubic.pl' ],
-            'breadcrumb' => [ '@id' => WIKIZEIT_URL . '#breadcrumbs' ],
-            'mainEntity' => [ '@id' => WIKIZEIT_URL ]
+            'isPartOf' => [ '@id' => 'https://jcubic.pl#website' ],
+            'breadcrumb' => [ '@id' => WIKIZEIT_URL . '#breadcrumbs' ]
         ],
 
         [
@@ -71,11 +70,14 @@ $graph = [
                 'https://commons.wikimedia.org/wiki/Category:WikiZEIT',
                 'https://www.youtube.com/@WikiZEIT',
                 'https://github.com/WikiZEIT'
+            ],
+            'mainEntityOfPage' => [
+                '@id' => WIKIZEIT_URL . '#webpage'
             ]
         ],
         [
             '@type' => 'WebSite',
-            '@id' => 'https://jcubic.pl',
+            '@id' => 'https://jcubic.pl#website',
             'url' => 'https://jcubic.pl',
             'name' => 'jcubic.pl'
         ],
@@ -88,7 +90,7 @@ $graph = [
                     '@type' => 'ListItem',
                     'position' => 1,
                     'item' => [
-                        '@id' => 'https://jcubic.pl',
+                        '@id' => 'https://jcubic.pl#webpage',
                         'name' => 'Głównie JavaScript'
                     ]
                 ],
