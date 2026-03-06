@@ -32,19 +32,22 @@ $graph = [
     '@context' => 'https://schema.org',
     '@graph' => [
         $person,
+
         [
             '@type' => 'WebPage',
             '@id' => WIKIZEIT_URL . '#webpage',
             'url' => WIKIZEIT_URL,
-            'isPartOf' => [ '@id' => WIKIZEIT_URL ],
+            'publisher' => [ '@id' => WIKIZEIT_URL ],
+            'isPartOf' => [ '@id' => 'https://jcubic.pl' ],
             'breadcrumb' => [ '@id' => WIKIZEIT_URL . '#breadcrumbs' ],
             'mainEntity' => [ '@id' => WIKIZEIT_URL ]
         ],
+
         [
             '@type' => 'EducationalOrganization',
             '@id' => WIKIZEIT_URL,
-            'name' => 'WikiZeit',
-            'alternateName' => 'Projekt WikiZeit',
+            'name' => 'WikiZEIT',
+            'alternateName' => 'Projekt WikiZEIT',
             'url' => WIKIZEIT_URL,
             'logo' => WIKIZEIT_URL . 'img/logo.svg',
             'description' => 'Projekt edukacyjny poświęcony etycznemu SEO, danym strukturalnym i profesjonalnej edycji Wikipedii.',
@@ -56,6 +59,11 @@ $graph = [
                 'GEO',
                 'AIO',
                 'Wikipedia',
+                'Entity SEO',
+                'Wikipedia',
+                'Traning',
+                'Teaching',
+                'Consulting',
                 'Wikidata',
                 'Open Source'
             ],
@@ -64,15 +72,15 @@ $graph = [
                 'https://commons.wikimedia.org/wiki/Category:WikiZEIT',
                 'https://www.youtube.com/@WikiZEIT',
                 'https://github.com/WikiZEIT'
-            ],
-            'isPartOf' => [ '@id' => WIKIZEIT_URL . '#webiste' ],
+            ]
         ],
         [
-            '@type' => 'WebSite',
-            '@id' => '{{ site.url }}#website',
-            'url' => '{{ site.url }}',
-            'name' => 'jcubic.pl'
+            '@type': 'WebSite',
+            '@id': 'https://jcubic.pl',
+            'url': 'https://jcubic.pl',
+            'name': 'jcubic.pl'
         ],
+
         [
             '@type' => 'BreadcrumbList',
             '@id' => WIKIZEIT_URL . '#breadcrumb',
@@ -90,14 +98,14 @@ $graph = [
                     'position' => 2,
                     'item' => [
                         '@id' => WIKIZEIT_URL . '#webpage',
-                        'name' => 'WikiZeit'
+                        'name' => 'WikiZEIT'
                     ]
                 ]
             ]
         ],
         [
             '@type' => 'SoftwareSourceCode',
-            'name' => 'WikiZeit Blog Source Code',
+            'name' => 'WikiZEIT Blog Source Code',
             'codeRepository' => 'https://github.com/WikiZEIT/blog',
             'programmingLanguage' => 'PHP',
             'author' => ['@id' => $person_id]
