@@ -1406,5 +1406,6 @@ footer {
         </a>
       </div>
     </div>
+    <script defer src="https://umami.jcubic.pl/script.js" data-website-id="c716ef1c-b60b-455c-8279-58996a09a8a6"></script>
   </body>
 </html>
