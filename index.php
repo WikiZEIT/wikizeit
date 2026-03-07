@@ -90,18 +90,14 @@ $graph = [
                 [
                     '@type' => 'ListItem',
                     'position' => 1,
-                    'item' => [
-                        '@id' => 'https://jcubic.pl#webpage',
-                        'name' => 'Głównie JavaScript'
-                    ]
+                    'item' => 'https://jcubic.pl#webpage',
+                    'name' => 'Głównie JavaScript'
                 ],
                 [
                     '@type' => 'ListItem',
                     'position' => 2,
-                    'item' => [
-                        '@id' => WIKIZEIT_URL . '#webpage',
-                        'name' => 'WikiZEIT'
-                    ]
+                    'item' => WIKIZEIT_URL . '#webpage',
+                    'name' => 'WikiZEIT'
                 ]
             ]
         ],
