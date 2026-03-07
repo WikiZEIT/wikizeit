@@ -1367,6 +1367,10 @@ footer {
                 wikizeit [@] jcubic [.] pl
               </li>
               <li class="footer-contact-item">
+                <span class="material-symbols-outlined">groups</span>
+                <a href="https://www.linkedin.com/company/wikizeit/">WikiZEIT on LinkedIn</a>
+              </li>
+              <li class="footer-contact-item">
                 <span class="material-symbols-outlined">person</span>
                 <a href="https://jakub.jankiewicz.org/pl/">Jakub T. Janiewicz</a>
               </li>
