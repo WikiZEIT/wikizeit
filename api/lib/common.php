@@ -123,6 +123,16 @@ function sanitizeRedirectUrl($url) {
         return WIKIZEIT_PATH;
     }
     $path = $parsed['path'] ?? '';
+    // Fully decode percent-encoding (loop handles double/multiple encoding like %252e%252e)
+    $decoded = $path;
+    do {
+        $prev = $decoded;
+        $decoded = rawurldecode($decoded);
+    } while ($decoded !== $prev);
+    // Reject any dot-segment traversal in the fully-decoded path
+    if (preg_match('#(^|/)\.\.?(/|$)#', $decoded)) {
+        return WIKIZEIT_PATH;
+    }
     if (strpos($path, WIKIZEIT_PATH) !== 0) {
         return WIKIZEIT_PATH;
     }
