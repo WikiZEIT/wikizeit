@@ -9,6 +9,13 @@ description: "Wprowadzenie do Wikidanych — otwartej bazy wiedzy, która zasila
 author: jcubic
 sitemap:
   lastmod: 2026-03-08
+faq:
+  - question: "Jak działają Wikidane?"
+    answer: |
+      Wikidane (*Wikidata*) organizują informacje w postaci **elementów** (items) i **właściwości** (properties):
+      - Każdy element ma unikalny identyfikator (np. Q42 dla Douglasa Adamsa)
+      - Właściwości opisują relacje między elementami (np. P31 = "jest instancją")
+      - Wartości mogą być tekstem, liczbami, datami, współrzędnymi geograficznymi lub odniesieniami do innych elementów
 ---
 
 Wikidata to wolna, otwarta baza wiedzy, która może być odczytywana i edytowana zarówno przez ludzi, jak i przez maszyny. Uruchomiona w 2012 roku przez Wikimedia Deutschland, Wikidata stanowi centralne repozytorium danych strukturalnych dla wszystkich projektów Wikimedia.
