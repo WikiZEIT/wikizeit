@@ -77,6 +77,17 @@ export default function(eleventyConfig) {
         return arr.slice(0, limit);
     });
 
+    // XML escape filter for RSS feed
+    eleventyConfig.addFilter("xml_escape", function(str) {
+        if (!str) return "";
+        return str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&apos;");
+    });
+
     // JSON stringify filter for JSON-LD
     eleventyConfig.addFilter("jsonify", function(value) {
         return JSON.stringify(value, null, 2);
