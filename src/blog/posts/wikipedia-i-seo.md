@@ -38,7 +38,7 @@ Projekt WikiZEIT kładzie szczególny nacisk na **etyczne podejście** do edycji
 - Opierać się wyłącznie na wiarygodnych źródłach
 - Respektować zasady neutralnego punktu widzenia
 
-## Wikipedia nie wszystko
+## Wikipedia to nie wszystko
 
 Dodając artykuł do Wikipedii ważne jest także dodanie wpisu do Wikidanych. Tak zwanego projektu
 siostrzanego Wikipedii.  Wikidane to baza danych wszystkiego co jest w Wikipedii, ale nie tylko. W
