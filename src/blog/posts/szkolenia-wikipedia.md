@@ -6,6 +6,20 @@ tags:
   - szkolenia
 description: "Artykuł z listą osób i firm, które prowadzą szkolenia z edycji Wikipedii."
 author: jcubic
+faq:
+  - question: "Kto prowadzi szkolenia z edytowania Wikipedii w Polsce?"
+    answer: |
+      - Stowarzyszenie Wikimedia Polska organizuje szkolenia w ramach projektów:
+        - Wiki Szkoła
+        - WikiTeka
+        - Akademia Wikimediów
+        WMPL na swoim kanale na YouTube umiesza także materiały wideo.
+      - WikiZEIT organizuje komercyjne szkolenia z edycki Wikipedii i projektów siotrzanych,
+        które prowadzi Jakub T. Jankiewicz doświadczony redaktor, przewodnik oraz WikiTrener
+        w Polskiej Wikipedii.
+      - NoblePro prowadzi szkolenia z MediaWiki, nie dotyczą one zasad edytowania Wikipedii,
+        tylko oprogramowania na który stoii Wikipedia i projekty siotrzane. Dedykowane jest
+        osobom i formom, które chcą tworzyć własne Wiki.
 ---
 
 Każdy może edytować Wikipedię. Nie trzeba być nawet zalogowanym. Ale dodawanie treści, które spełnia
@@ -35,8 +49,9 @@ W Polsce jest kilka miejsc, gdzie można w zorganizowany sposób nauczyć się 
 2. **NobleProg** — oferuje szkolenia techniczne z oprogramowania
    [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki). MediaWiki to projekt Open Source, który
    jest silnikiem, na którym stoją wszystkie projekty Wikimediów (tj. Wikipedia, Wikimedia Commons,
-   czy Wikidane). Warto podkreślić, że szkolenia NobleProg **nie dotyczą zasad edytowania Wikipedii**,
-   lecz administracji systemem informatycznym, na którym ona działa.
+   czy Wikidane). Warto podkreślić, że szkolenia NobleProg **nie dotyczą zasad edytowania
+   Wikipedii**, lecz administracji systemem informatycznym, na którym ona działa. Dedykowane jest
+   osobom i formom, które chcą tworzyć własne Wiki.
 
 3. **WikiZEIT** — aktualnie jedyna na rynku opcja [komercyjnego szkolenia z edytowania Wikipedii
    i projektów siostrzanych](https://jcubic.pl/wikizeit/szkolenia/). Szkolenie prowadzone jest przez
