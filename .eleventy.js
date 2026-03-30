@@ -1,5 +1,7 @@
 import path from 'path';
 import fs from 'fs/promises';
+import { readFileSync } from 'fs';
+import { createHash } from 'crypto';
 import { Liquid } from 'liquidjs';
 import { chromium } from 'playwright';
 import { dirname } from 'node:path';
@@ -167,6 +169,13 @@ export default function(eleventyConfig) {
     // JSON stringify filter for JSON-LD
     eleventyConfig.addFilter("jsonify", function(value) {
         return JSON.stringify(value, null, 2);
+    });
+
+    // Cache-busting hash filter
+    eleventyConfig.addFilter("contentHash", function(filePath) {
+        const fullPath = path.join(__dirname, 'src/static', filePath);
+        const content = readFileSync(fullPath);
+        return createHash('md5').update(content).digest('hex').slice(0, 8);
     });
 
     // Slugify filter

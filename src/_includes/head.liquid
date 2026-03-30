@@ -26,7 +26,7 @@
 <!-- RSS -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Blog" href="{{ site.url }}/feed.xml" />
 <!-- Stylesheet -->
-<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+{% assign cssHash = "/css/style.css" | contentHash %}<link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={{ cssHash }}" />
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
