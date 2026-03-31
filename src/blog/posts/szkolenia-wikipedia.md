@@ -101,7 +101,7 @@ natychmiastowego usuwania artykułów.
 Jeśli interesuje cię wprowadzenie do Wikipedii, warto zacząć od kanału YouTube stowarzyszenia. Jeśli
 interesuje cię szkolenie na żywo, możesz wybrać Stowarzyszenie Wikimedia Polska. Osobą odpowiedzialną
 za edukacje w stowarzyszeniu jest [Wioletta
-Matusiak](https://pl.wikimedia.org/wiki/U%C5%BCytkowniczka:Wioletta_Matusiak_(WMPL).
+Matusiak](https://pl.wikimedia.org/wiki/U%C5%BCytkowniczka:Wioletta_Matusiak_(WMPL)).
 
 Jeśli interesuje cię kompleksowe szkolenie z edycji Wikipedii, Wikidanych, oraz Wikimedia Commons, dla firm i instytucji
 możesz skorzystać z [oferty WikiZEIT](https://jcubic.pl/wikizeit/szkolenia/).
