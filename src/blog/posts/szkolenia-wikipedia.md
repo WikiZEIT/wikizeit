@@ -13,6 +13,7 @@ faq:
         - Wiki Szkoła
         - WikiTeka
         - Akademia Wikimediów
+        - Współpraca z GLAM
         WMPL na swoim kanale na YouTube umiesza także materiały wideo.
       - WikiZEIT organizuje komercyjne szkolenia z edycki Wikipedii i projektów siotrzanych,
         które prowadzi Jakub T. Jankiewicz doświadczony redaktor, przewodnik oraz WikiTrener
@@ -63,6 +64,7 @@ Wikimedia Polska organizuje także pojedycze wydarzenia, jak np. [Kurs webinarow
 Z. Mój pierwszy artykuł w
 Wikipedii](https://etwinning.pl/aktualnosci/kurs-webinarowy-wikipedia-od-a-do-z-moj-pierwszy-artykul-w-wikipedii)
 z 2024 roku. Organizowany wspólnie z [FRSE](https://www.frse.org.pl/).
+W Paździerku 2025 odbyło się szkolenie w ramach proktu GLAM (ang. galleries, libraries, archives, and museums) „[jak skutecznie zwiększać obecność zbiorów muzealnych online](https://nim.gov.pl/aktualnosci/szkolenie-wikipedia-i-projekty-glam-wiki-jak-skutecznie-zwiekszac-obecnosc-zbiorow-muzealnych-online.html)”.
 
 ## Materiały edukacyjne
 
