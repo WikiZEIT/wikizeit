@@ -87,9 +87,9 @@ edukacyjne:
 ## Edytowanie komercyjne i współpraca z agencjami SEO
 Specyficznym wyzwaniem jest edytowanie Wikipedii w celach komercyjnych (tzw. *Paid Editing* - płatna
 edycja). Oficjalne szkolenia stowarzyszeń koncentrują się na misji wolontariackiej i
-edukacyjnej. Jednak firmy, instytucje czy agencje SEO/GEO/AIE często potrzebują wiedzy, jak zgodnie
-z rygorystycznymi zasadami Wikipedii oraz Warunkami Użytkowania Wikimedia Foundation deklarować
-odpłatną edycję.
+edukacyjnej. Jednak firmy, instytucje czy agencje SEO/GEO/AEO/AIO często potrzebują wiedzy, jak
+zgodnie z rygorystycznymi zasadami Wikipedii oraz Warunkami Użytkowania Wikimedia Foundation
+deklarować odpłatną edycję.
 
 Jeśli Twoja firma lub agencja planuje wprowadzenie treści komercyjnych do Wikipedii, warto
 skonsultować się z ekspertem. W ramach WikiZEIT oferuję wsparcie w procesie poprawnej deklaracji
