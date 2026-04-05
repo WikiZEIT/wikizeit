@@ -57,7 +57,7 @@ W Polsce jest kilka miejsc, gdzie można w zorganizowany sposób nauczyć się 
    osobom i formom, które chcą tworzyć własne Wiki.
 
 3. **WikiZEIT** — aktualnie jedyna na rynku opcja [komercyjnego szkolenia z edytowania Wikipedii
-   i projektów siostrzanych](https://jcubic.pl/wikizeit/szkolenia/). Szkolenie prowadzone jest przez
+   i projektów siostrzanych](https://jcubic.pl/wikizeit/oferta/). Szkolenie prowadzone jest przez
    [Jakuba T. Jankiewicza](https://jakub.jankiewicz.org/pl/), doświadczonego redaktora, przewodnika
    oraz WikiTrenera Polskiej Wikipedii, który prowadzi także szkolenia jako wolontariusz dla Stowarzyszenia Wikimedia Polska.
 
