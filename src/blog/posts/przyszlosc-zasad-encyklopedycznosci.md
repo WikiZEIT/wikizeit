@@ -94,3 +94,8 @@ projekt w polskiej Wikipedii, którego celem jest usystematyzowanie podejścia d
 opisywania poszczególnych tematów i zagadnień na polskojęzycznej Wikipedii.
 
 Miejmy nadzieję, że dzięki tej inicjatywie zasady encyklopedyczności będą bardziej klarowne.
+
+## Czy twoja firma może mieć stronę w Wikipedii?
+
+Jeśli nadal zastanawiasz się, czy twoja firma nadaje się do Wikipedii. Wykonam dla ciebie darmowy
+audyt, sprawdź szczegóły na stronie z [moją ofertą](https://jcubic.pl/wikizeit/szkolenia/).
