@@ -64,9 +64,26 @@ layout: layouts/base.liquid
     </div>
   </div>
 
-  <!-- Author Bio Content -->
-  <div class="author-content prose">
-    {{ content }}
+  <!-- Author Bio + Photo -->
+  <div class="author-body">
+    <div class="author-content prose">
+      {{ content }}
+    </div>
+    {% if authorData.photo %}
+    <aside class="author-photo">
+      <figure>
+        <a href="{{ authorData.photo.href }}" target="_blank" rel="noopener noreferrer">
+          <img src="{{ authorData.photo.src }}" alt="{{ authorData.photo.alt }}" width="960" height="775" />
+        </a>
+        <figcaption>
+          <p class="author-photo-caption">{{ authorData.photo.alt }}</p>
+          <a href="{{ authorData.photo.href }}" target="_blank" rel="noopener noreferrer">{{ authorData.photo.attribution }}</a>,
+          <a href="{{ authorData.photo.licenseUrl }}" target="_blank" rel="noopener noreferrer">{{ authorData.photo.license }}</a>,
+          via Wikimedia Commons
+        </figcaption>
+      </figure>
+    </aside>
+    {% endif %}
   </div>
 
   <!-- Author's Posts -->

@@ -4,6 +4,14 @@
         "name": "jcubic",
         "url": "https://jakub.jankiewicz.org/pl/",
         "bio": "Ekspert w dziedzinie Wikipedii, etycznego SEO i otwartej wiedzy.",
+        "photo": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Wzlot_2026_RD_072.jpg/960px-Wzlot_2026_RD_072.jpg",
+            "href": "https://commons.wikimedia.org/wiki/File:Wzlot_2026_RD_072.jpg",
+            "alt": "Jakub T. Jankiewicz na Konferencji WZLOT 2026 w Łodzi",
+            "attribution": "Rdrozd",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        },
         "social": [
             { "label": "Twitter/X",    "icon": "x",         "url": "https://twitter.com/jcubic" },
             { "label": "LinkedIn",     "icon": "linkedin",  "url": "https://www.linkedin.com/in/jakubjankiewicz/" },
