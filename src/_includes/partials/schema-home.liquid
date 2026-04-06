@@ -9,6 +9,7 @@
       "name": "{{ person.name }}",
       "image": "{{ person.image }}",
       "jobTitle": "{{ person.jobTitle }}",
+      "description": "{{ person.description }}",
       "sameAs": [
         {% for link in person.sameAs %}"{{ link }}"{% unless forloop.last %},
         {% endunless %}{% endfor %}
@@ -22,7 +23,7 @@
     },
     {
       "@type": "EducationalOrganization",
-      "@id": "{{ site.url }}/",
+      "@id": "{{ site.url }}/#organization",
       "name": "{{ site.title }}",
       "alternateName": "Projekt WikiZEIT",
       "url": "{{ site.url }}/",

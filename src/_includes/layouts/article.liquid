@@ -27,11 +27,7 @@ schemaType: article
           <img src="{{ '/img/avatars/' | append: authorData.name | append: '.jpg' | url }}" alt="{{ authorData.fullname }}" />
         </div>
         <div>
-          {% if authorData.url %}
-            <p class="article-author-name"><a href="{{ authorData.url }}">{{ authorData.fullname }}</a></p>
-          {% else %}
-            <p class="article-author-name">{{ authorData.fullname | default: authorKey }}</p>
-          {% endif %}
+          <p class="article-author-name"><a href="{{ '/autor/' | append: authorKey | append: '/' | url }}">{{ authorData.fullname | default: authorKey }}</a></p>
         </div>
       </div>
       <div class="article-meta-item">
@@ -78,11 +74,7 @@ schemaType: article
           <div class="sidebar-author-avatar">
             <img src="{{ '/img/avatars/' | append: authorData.name | append: '.jpg' | url }}" alt="{{ authorData.fullname }}" />
           </div>
-          {% if authorData.url %}
-            <h4><a href="{{ authorData.url }}">{{ authorData.fullname }}</a></h4>
-          {% else %}
-            <h4>{{ authorData.fullname | default: authorKey }}</h4>
-          {% endif %}
+          <h4><a href="{{ '/autor/' | append: authorKey | append: '/' | url }}">{{ authorData.fullname | default: authorKey }}</a></h4>
           <p class="bio">{{ authorData.bio | default: "Ekspert w dziedzinie Wikipedii, etycznego SEO i otwartej wiedzy." }}</p>
         </div>
       </div>

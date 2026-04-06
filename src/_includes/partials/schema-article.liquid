@@ -9,6 +9,7 @@
       "name": "{{ person.name }}",
       "image": "{{ person.image }}",
       "jobTitle": "{{ person.jobTitle }}",
+      "description": "{{ person.description }}",
       "sameAs": [
         {% for link in person.sameAs %}"{{ link }}"{% unless forloop.last %},
         {% endunless %}{% endfor %}
@@ -18,15 +19,7 @@
       "@type": "BlogPosting",
       "datePublished": "{{ date | dateFormat: 'iso' }}",
       "dateModified": "{% if modified %}{{ modified | dateFormat: 'iso' }}{% else %}{{ date | dateFormat: 'iso' }}{% endif %}",
-      "publisher": {
-        "@type": "EducationalOrganization",
-        "name": "{{ site.title }}",
-        "url": "{{ site.url }}/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ site.url }}/img/logo.svg"
-        }
-      },
+      "publisher": { "@id": "{{ site.url }}/#organization" },
       "author": { "@id": "{{ person['@id'] }}" },
       "headline": "{{ title }}",
       {% if featuredImage %}"image": {
