@@ -2,20 +2,34 @@
 
 ## Overview
 
-Eleventy (11ty) v3 static site generator project with a blog, served at `/wikizeit/` subdirectory. PHP backend handles email subscription/verification and contact form. The `_site/` output directory is fully self-contained and deployable.
+Eleventy (11ty) v3 static site generator project with a blog, served at `/wikizeit/`
+subdirectory. PHP backend handles email subscription/verification and contact form. The `_site/`
+output directory is fully self-contained and deployable.
 
 ## Key Rules
+
+- **Do not fix HTML output indentation** — Liquid partials make it impossible to have properly
+  indented HTML output. Focus on keeping **source templates** readable. HTML will be minified in
+  production anyway, so output indentation has zero value. Never change Liquid source just to
+  improve spacing in the rendered HTML.
+
+- **Markdown line wrapping** — all generated or edited Markdown files must use hard line wraps
+  at 100 characters, broken at word boundaries. This matches the Emacs `fill-column` setup used
+  in this project, keeps `git diff` readable, and avoids long lines that are hard to review.
 
 - **Liquid templates** — all layouts and partials use Liquid
 - **No JavaScript required** — site works without JS; JS is only for progressive enhancement
 - **Single CSS file** — `src/static/css/style.css`
 - **Clean URLs** — directory-style with `index.html` inside directories
 - **Path prefix** — `pathPrefix: "/wikizeit/"` in `.eleventy.js`
-- **DO NOT `rm -rf _site`** — it breaks the running Docker container. Use `npx @11ty/eleventy` which overwrites files in place
+- **DO NOT `rm -rf _site`** — it breaks the running Docker container. Use `npx @11ty/eleventy` which
+  overwrites files in place
 - **DO NOT use `sudo`** — Docker runs as host user, no permission issues
 - **Static files** in `src/static/` are copied to output root (not the directory itself)
-- **PHP files** (`src/static/index.php`, `src/static/contact/index.php`) are thin wrappers that read static HTML and inject form messages via `<!-- form-message-placeholder -->`
-- **Authors** are defined in `src/_data/users.json` keyed by nick (e.g. `jcubic`). Blog posts set `author: jcubic` in front matter
+- **PHP files** (`src/static/index.php`, `src/static/contact/index.php`) are thin wrappers that read
+  static HTML and inject form messages via `<!-- form-message-placeholder -->`
+- **Authors** are defined in `src/_data/users.json` keyed by nick (e.g. `jcubic`). Blog posts set
+  `author: jcubic` in front matter
 - **Person JSON-LD** data comes from `src/_data/person.json`
 
 ## Build & Test

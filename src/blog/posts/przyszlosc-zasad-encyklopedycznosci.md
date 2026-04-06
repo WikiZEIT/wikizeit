@@ -18,7 +18,11 @@ Wikipedii. Czyli czy twój temat nadaje się do Wikipedii?
 
 ## Kryteria encyklopedyczności
 
-Najważniejszą strona w Wikipedii to [WP:WER](https://pl.wikipedia.org/wiki/Wikipedia:Encyklopedyczno%C5%9B%C4%87). Czyli zbiór zasad, które zostały zaakceptowane przez społeczność Wikipedystów. Jedna z nich jest np. to że doktorzy habilitowani są autoency, czyli wystarczy, że naukowiec posiada habilitację i już automatycznie nadaje się do Wikipedii.
+Najważniejszą strona w Wikipedii to
+[WP:WER](https://pl.wikipedia.org/wiki/Wikipedia:Encyklopedyczno%C5%9B%C4%87). Czyli zbiór zasad,
+które zostały zaakceptowane przez społeczność Wikipedystów. Jedna z nich jest np. to że doktorzy
+habilitowani są autoency, czyli wystarczy, że naukowiec posiada habilitację i już automatycznie
+nadaje się do Wikipedii.
 
 Obowiązujące kryteria można znaleźć na powyższej stronie w sekcji "Kryteria – obowiązujące".
 
@@ -57,19 +61,20 @@ encyklopedyczność i zostanie w Wikipedii.
 Wikipedia nie jest medium reklamowym ani katalogiem firm. Więc treści czysto reklamowe,
 niepotwierdzone wiarygodnymi, niezależnymi, źródłami, bardzo szybko zostaną skasowane.
 
-Jeśli jedyne wzmianki o firmie to strony sponsorowane i komunikaty firmy oraz działania firm SEO,
-są niewielkie szanse na encyklopedyczność. Więc dodawanie strony takiej firmy po prostu nie ma sensu
-i jest to tylko strata czasu i pieniędzy.
+Jeśli jedyne wzmianki o firmie to strony sponsorowane i komunikaty firmy oraz działania firm SEO, są
+niewielkie szanse na encyklopedyczność. Więc dodawanie strony takiej firmy po prostu nie ma sensu i
+jest to tylko strata czasu i pieniędzy.
 
 ## DNU, czyli poczekalnia
 
-DNU (czyli Dyskusja nad usunięciem) to system używany w polskiej Wikipedii, służący dyskusji na temat encyklopedyczności
-artykułów. Każdy Wikipedysta może zgłosić artykuł do DNU. Wikipedia opiera się na [konsensusie](https://pl.wikipedia.org/wiki/Wikipedia:Konsensus).
-Każdy może wziąć udział w dyskusji DNU, jednak liczą się merytoryczne argumenty nie ilość głosów.
+DNU (czyli Dyskusja nad usunięciem) to system używany w polskiej Wikipedii, służący dyskusji na
+temat encyklopedyczności artykułów. Każdy Wikipedysta może zgłosić artykuł do DNU. Wikipedia opiera
+się na [konsensusie](https://pl.wikipedia.org/wiki/Wikipedia:Konsensus).  Każdy może wziąć udział w
+dyskusji DNU, jednak liczą się merytoryczne argumenty nie ilość głosów.
 
-Polska Wikipedia działa trochę jak system [precedensów](https://pl.wikipedia.org/wiki/Precedens) w prawie USA.
-Można powoływać się na inne dyskusje w DNU, gdzie po dyskusji artykuł został w Wikipedii lub został skasowany.
-Można także powoływać się na kryteria lub ich propozycje.
+Polska Wikipedia działa trochę jak system [precedensów](https://pl.wikipedia.org/wiki/Precedens) w
+prawie USA.  Można powoływać się na inne dyskusje w DNU, gdzie po dyskusji artykuł został w
+Wikipedii lub został skasowany.  Można także powoływać się na kryteria lub ich propozycje.
 
 Aby przeszukać DNU, w celu zebrania przykładów, można posłużyć się
 [zaawansowaną wyszukiwarką](https://pl.wikipedia.org/w/index.php?search=poczekalnia&title=Specjalna%3ASzukaj&profile=advanced&fulltext=1&ns4=1).
