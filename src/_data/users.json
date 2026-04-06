@@ -3,6 +3,14 @@
         "fullname": "Jakub T. Jankiewicz",
         "name": "jcubic",
         "url": "https://jakub.jankiewicz.org/pl/",
-        "bio": "Ekspert w dziedzinie Wikipedii, etycznego SEO i otwartej wiedzy."
+        "bio": "Ekspert w dziedzinie Wikipedii, etycznego SEO i otwartej wiedzy.",
+        "social": [
+            { "label": "Twitter/X",    "url": "https://twitter.com/jcubic" },
+            { "label": "LinkedIn",     "url": "https://www.linkedin.com/in/jakubjankiewicz/" },
+            { "label": "GitHub",       "url": "https://github.com/jcubic" },
+            { "label": "Wikipedia PL", "url": "https://pl.wikipedia.org/wiki/Wikipedysta:Jcubic" },
+            { "label": "Wikidata",     "url": "https://www.wikidata.org/wiki/Q113688230" },
+            { "label": "YouTube",      "url": "https://www.youtube.com/@jcubic" }
+        ]
     }
 }

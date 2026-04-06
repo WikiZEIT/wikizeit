@@ -1,0 +1,83 @@
+---
+layout: layouts/base.liquid
+---
+{% assign authorKey = author | default: page.fileSlug %}
+{% assign authorData = users[authorKey] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "{{ site.url }}{{ page.url }}#profilepage",
+      "url": "{{ site.url }}{{ page.url }}",
+      "name": "{{ authorData.fullname }}",
+      "description": "{{ description }}",
+      "mainEntity": { "@id": "{{ person['@id'] }}" },
+      "isPartOf": { "@id": "{{ site.url }}/#organization" }
+    },
+    {
+      "@type": "{{ person['@type'] }}",
+      "@id": "{{ person['@id'] }}",
+      "name": "{{ person.name }}",
+      "url": "{{ person.url }}",
+      "image": "{{ person.image }}",
+      "jobTitle": "{{ person.jobTitle }}",
+      "description": "{{ person.description }}",
+      "sameAs": [
+        {% for link in person.sameAs %}"{{ link }}"{% unless forloop.last %},
+        {% endunless %}{% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+<main class="author-main">
+
+  <!-- Author Hero -->
+  <div class="author-hero">
+    <div class="author-hero-avatar">
+      <img src="{{ '/img/avatars/' | append: authorData.name | append: '-big.jpg' | url }}"
+           onerror="this.src='{{ '/img/avatars/' | append: authorData.name | append: '.jpg' | url }}'"
+           alt="{{ authorData.fullname }}" />
+    </div>
+    <div class="author-hero-info">
+      <h1 class="author-name">{{ authorData.fullname }}</h1>
+      <p class="author-bio-short">{{ authorData.bio }}</p>
+      {% if authorData.social %}
+      <ul class="author-social">
+        {% for link in authorData.social %}
+        <li><a href="{{ link.url }}" class="author-social-link" rel="noopener noreferrer" target="_blank">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if authorData.url %}
+      <a href="{{ authorData.url }}" class="author-website" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined">language</span> Strona osobista
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Author Bio Content -->
+  <div class="author-content prose">
+    {{ content }}
+  </div>
+
+  <!-- Author's Posts -->
+  {% assign authorPosts = collections.post | where: "data.author", authorKey %}
+  {% if authorPosts.size > 0 %}
+  <section class="author-posts">
+    <h2 class="author-posts-title">
+      <span class="material-symbols-outlined">article</span>
+      Artykuły autora
+    </h2>
+    <div class="post-grid">
+      {% for post in authorPosts %}
+        {% include "partials/post-card.liquid", post: post %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+</main>
