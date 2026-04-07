@@ -25,7 +25,7 @@ eleventyExcludeFromCollections: true
       {%- endfor %}
       {%- if post.data.author %}
       {%- assign postAuthor = users[post.data.author] %}
-      <author>{{ site.email }} ({{ postAuthor.name | xml_escape }})</author>
+      <author>{{ site.email }} ({{ postAuthor.fullname | xml_escape }})</author>
       {%- endif %}
     </item>
     {%- endfor %}
