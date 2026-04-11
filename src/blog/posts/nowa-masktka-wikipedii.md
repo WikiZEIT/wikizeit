@@ -4,7 +4,7 @@ date: 2026-04-11
 tags:
   - Wikipedia
   - marketing
-description: "Z okazji 25-lecia Wikipedii powstała nowa maskotka o nazwie „Baby Globe”"
+description: "Z okazji 25-lecia Wikipedii powstała nowa maskotka o nazwie „Baby Globe”."
 author: jcubic
 faq:
   - question: "Jak powstała nowa maskotka Wikipedii?"
