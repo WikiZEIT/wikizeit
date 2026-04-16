@@ -20,6 +20,12 @@ faq:
         - Dedykowany strumień: Dane w czasie rzeczywistym.
         - Gwarancję SLA (Service Level Agreement): Pewność dostępności systemów.
         - Format JSON: Dane gotowe do użycia przez maszyny.
+  - question: "Kto płaci za Polską Wikipedię?"
+    answer: |
+      Polska Wikipedia utrzymuje się głównie z dobrowolnych wpłat. Kluczową rolę odgrywa tu
+      Stowarzyszenie Wikimedia Polska, które posiada status Organizacji Pożytku Publicznego (OPP).
+      Dzięki temu każdy podatnik w Polsce może przekazać 1,5% swojego podatku dochodowego na wsparcie
+      wolnej wiedzy.
 ---
 
 ## Czy Wikipedia jest płatna?
@@ -136,6 +142,24 @@ wkrótce w artykule:
 Mało kto to robi, a warto: dodaj link do swojego wpisu w Wikidanych w stopce strony. W połączeniu z
 danymi strukturalnymi tworzy to „cyfrowy dowód tożsamości”.  Pomagasz Google szybciej i pewniej
 połączyć Twoją witrynę z oficjalną encją w Grafie Wiedzy.
+
+## Kto płaci za Polską Wikipedię?
+
+Polska Wikipedia utrzymuje się głównie z dobrowolnych wpłat. Kluczową rolę odgrywa tu
+[**Stowarzyszenie Wikimedia Polska**](https://wikimedia.pl/), które posiada status Organizacji
+Pożytku Publicznego (OPP).
+
+Dzięki temu każdy podatnik w Polsce może przekazać **1,5% swojego podatku dochodowego** na wsparcie
+wolnej wiedzy.
+
+* **Finanse:** W budżecie Stowarzyszenia na 2024 rok wpływy z 1,5% zaplanowano na **1,4 mln zł**.
+* **Udział:** Stanowi to niemal **połowę (ok. 45-50%)** całkowitych przychodów organizacji.
+* **Cel:** Środki te finansują serwery, konkursy dla edytorów (np. Wiki Lubi Zabytki) oraz
+  szkolenia.
+
+To prosta metoda wsparcia, która nie kosztuje Cię ani grosza, a realnie buduje polskie zasoby Wiki.
+
+[**Przekaż 1.5% podatku na Wikipedię już dziś**](https://opp.wikimedia.pl/).
 
 ## Podsumowanie
 
