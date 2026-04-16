@@ -82,6 +82,13 @@ Najczęściej używane typy w kontekście SEO to:
 | `WebPage` | Strony internetowe |
 | `BreadcrumbList` | Nawigacja breadcrumb |
 | `FAQPage` | Strony z często zadawanymi pytaniami |
+| `HowTo` | Instrukcje i poradniki krok po kroku |
+| `Course` | Kursy online, szkolenia i lekcje |
+| `Review` | Recenzje produktów, książek lub filmów |
+| `LocalBusiness` | Firmy działające stacjonarnie (adres, mapa) |
+| `SoftwareApplication` | Aplikacje, narzędzia online i biblioteki |
+| `Dataset` | Zbiory danych (ważne dla projektów naukowych) |
+| `VideoObject` | Treści wideo osadzone na stronie |
 
 Warto przejrzeć [oficjalną dokumentację na stronie
 schema.org](https://schema.org/docs/documents.html).  Pomocna jest także wyszukiwarka.
