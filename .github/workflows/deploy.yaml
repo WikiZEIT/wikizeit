@@ -1,4 +1,4 @@
-name: Deploy to MyDevil Server
+name: CI/CD
 
 on:
   push:

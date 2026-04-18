@@ -1,5 +1,7 @@
 # [Blog: WikiZEIT](https://jcubic.pl/wikizeit/)
 
+[![CI/CD](https://github.com/WikiZEIT/blog/actions/workflows/deploy.yaml/badge.svg)](https://github.com/WikiZEIT/blog/actions/workflows/deploy.yaml)
+
 Edukacyjny projekt o Wikipedii i etycznym SEO autorstwa [Jakuba T. Janiewicza](https://jakub.jankiewicz.org/pl/).
 Odkryj mechanizmy największej encyklopedii świata i jej wpływu na twoją markę.
 
