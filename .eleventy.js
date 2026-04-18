@@ -1,26 +1,11 @@
 import path from 'path';
-import fs from 'fs/promises';
 import { readFileSync } from 'fs';
 import { createHash } from 'crypto';
-import { Liquid } from 'liquidjs';
-import { chromium } from 'playwright';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import socialCard from 'eleventy-plugin-svg-social-card';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-const liquid = new Liquid();
-
-const delay = time => new Promise(resolve => setTimeout(resolve, time));
-
-function xmlEscape(str) {
-    return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&apos;');
-}
 
 function formatDate(date) {
     const d = new Date(date);
@@ -44,54 +29,21 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ ".htaccess": "/.htaccess" });
 
-    // --- Social card generation via Playwright ---
-    let browser;
-
-    const svgTemplate = fs.readFile(path.join(__dirname, 'src/card/social-card.svg'), 'utf8').then(svg => {
-        return liquid.parse(svg);
-    });
-
-    eleventyConfig.on('eleventy.before', async () => {
-        browser = await chromium.launch({ args: ['--no-sandbox'] });
-    });
-
-    eleventyConfig.on('eleventy.after', async () => {
-        if (browser) {
-            await browser.close();
-        }
-    });
-
-    eleventyConfig.addAsyncShortcode('socialCard', async function() {
-        const { title, author: authorKey, date, users } = this.ctx.environments;
-        const authorData = users[authorKey] || users['jcubic'];
-        const svgDir = path.join(__dirname, 'src/static/img');
-        const outputSvg = await liquid.render(await svgTemplate, {
-            username: authorData.name,
-            fullname: xmlEscape(authorData.fullname),
-            title: xmlEscape(title),
-            path: svgDir,
-            date: xmlEscape(formatDate(date))
-        });
-        const { fileSlug } = this.page;
-        const tmpSvg = path.join(__dirname, `_tmp-social-card-${fileSlug}.svg`);
-        await fs.writeFile(tmpSvg, outputSvg);
-
-        const outputDir = path.join(__dirname, '_site/img/social-cards');
-        await fs.mkdir(outputDir, { recursive: true });
-
-        const filename = path.join(outputDir, `${fileSlug}.png`);
-
-        const page = await browser.newPage();
-        await page.setViewportSize({ width: 1200, height: 630 });
-        await page.goto('file://' + tmpSvg);
-        await delay(200);
-
-        await page.screenshot({ path: filename });
-        await page.close();
-        await fs.unlink(tmpSvg).catch(() => {});
-
-        console.log(`[11ty] Social card: img/social-cards/${fileSlug}.png`);
-        return '';
+    eleventyConfig.addPlugin(socialCard, {
+        template: path.join(__dirname, 'src/card/social-card.svg'),
+        outputDir: path.join(__dirname, '_site/img/social-cards'),
+        urlPath: '/img/social-cards',
+        data(ctx) {
+            const { title, author: authorKey, date, users } = ctx;
+            const authorData = users[authorKey] || users['jcubic'];
+            return {
+                username: authorData.name,
+                fullname: authorData.fullname,
+                title,
+                path: path.join(__dirname, 'src/static/img'),
+                date: formatDate(date),
+            };
+        },
     });
 
     // Blog post collection sorted by date descending
