@@ -1,24 +1,53 @@
 #!/bin/bash
 
-# Submit a URL to IndexNow for search engine indexing
-# Usage: ./scripts/indexnow.sh <url>
+# Submit one or more URLs to IndexNow in a single request.
+# Usage:
+#   ./scripts/indexnow.sh <url> [url ...]
+#   ./scripts/indexnow.sh < urls.txt
+#   command-producing-urls | ./scripts/indexnow.sh
 # Environment: INDEXNOW_KEY must be set
 
 set -euo pipefail
-
-if [ -z "${1:-}" ]; then
-    echo "Usage: $0 <url>" >&2
-    exit 1
-fi
 
 if [ -z "${INDEXNOW_KEY:-}" ]; then
     echo "Error: INDEXNOW_KEY environment variable is not set" >&2
     exit 1
 fi
 
-URL="$1"
-HOST="jcubic.pl"
+urls=()
+if [ "$#" -gt 0 ]; then
+    urls=("$@")
+else
+    while IFS= read -r line; do
+        [ -z "$line" ] && continue
+        urls+=("$line")
+    done
+fi
+
+if [ "${#urls[@]}" -eq 0 ]; then
+    echo "Usage: $0 <url> [url ...]   (or pipe URLs on stdin)" >&2
+    exit 1
+fi
+
+for url in "${urls[@]}"; do
+    case "$url" in
+        http://*|https://*) ;;
+        *)
+            echo "Error: URL must start with http:// or https:// — got: $url" >&2
+            exit 1
+            ;;
+    esac
+done
+
+HOST="wikizeit.jcubic.pl"
 KEY_LOCATION="https://${HOST}/${INDEXNOW_KEY}.txt"
+
+url_list=""
+sep=""
+for url in "${urls[@]}"; do
+    url_list+="${sep}\"${url}\""
+    sep=","
+done
 
 response=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/IndexNow" \
     -H "Content-Type: application/json; charset=utf-8" \
@@ -26,12 +55,12 @@ response=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.
         \"host\": \"${HOST}\",
         \"key\": \"${INDEXNOW_KEY}\",
         \"keyLocation\": \"${KEY_LOCATION}\",
-        \"urlList\": [\"${URL}\"]
+        \"urlList\": [${url_list}]
     }")
 
 case "$response" in
-    200) echo "OK: URL submitted successfully" ;;
-    202) echo "OK: URL accepted, pending processing" ;;
+    200) echo "OK: ${#urls[@]} URL(s) submitted successfully" ;;
+    202) echo "OK: ${#urls[@]} URL(s) accepted, pending processing" ;;
     400) echo "Error: Invalid format" >&2; exit 1 ;;
     403) echo "Error: Invalid key" >&2; exit 1 ;;
     422) echo "Error: URL doesn't match host or key issue" >&2; exit 1 ;;
