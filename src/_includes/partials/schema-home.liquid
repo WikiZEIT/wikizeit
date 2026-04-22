@@ -19,7 +19,7 @@
       "@type": "WebPage",
       "@id": "{{ site.url }}/#webpage",
       "url": "{{ site.url }}/",
-      "isPartOf": { "@id": "https://jcubic.pl#website" }
+      "isPartOf": { "@id": "{{ site.url }}/#website" }
     },
     {
       "@type": "EducationalOrganization",
@@ -55,9 +55,12 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://jcubic.pl#website",
-      "url": "https://jcubic.pl",
-      "name": "jcubic.pl"
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "{{ site.title }}",
+      "description": "{{ site.description }}",
+      "inLanguage": "{{ site.language }}",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
     },
     {
       "@type": "BreadcrumbList",
@@ -66,14 +69,8 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "item": "https://jcubic.pl",
-          "name": "Głównie JavaScript"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
           "item": "{{ site.url }}/",
-          "name": "WikiZEIT"
+          "name": "{{ site.title }}"
         }
       ]
     },
