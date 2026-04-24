@@ -9,14 +9,13 @@
     {% endif %}
   </head>
   <body>
-    {% include "partials/social-icons-sprite.liquid" %}
-    {% include "partials/nav.liquid" %}
+    {% include "partials/social-icons-sprite.liquid" -%}
+    {% include "partials/nav.liquid" -%}
 
-    {{ content }}
+    {{- content -}}
 
-    {% include "partials/footer.liquid" %}
-    {% include "partials/mobile-nav.liquid" %}
-
+    {% include "partials/footer.liquid" -%}
+    {% include "partials/mobile-nav.liquid" -%}
     <script>
       document.querySelector('.menu-button').addEventListener('click', function() {
         document.querySelector('.nav-links').classList.toggle('open');
