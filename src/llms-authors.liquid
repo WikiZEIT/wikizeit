@@ -6,4 +6,4 @@ pagination:
 permalink: "autor/{{ author.data.author }}.md"
 eleventyExcludeFromCollections: true
 ---
-{{ author.inputPath | rawMarkdown }}
+{{ author.inputPath | rawMarkdown | markdownLinks }}

@@ -17,12 +17,12 @@ jednoczesnym zachowaniu najwyższych standardów SEO.
 
 ## Najnowsze artykuły
 {% for post in collections.post limit: 3 %}
-- [{{ post.data.title }}]({{ site.url }}/blog/{{ post.fileSlug }}/): {{ post.data.description }}
+- [{{ post.data.title }}]({{ site.url }}/blog/{{ post.fileSlug }}.md): {{ post.data.description }}
 {%- endfor %}
 
 ## Więcej informacji
 
-- [O projekcie]({{ site.url }}/about/)
-- [Blog]({{ site.url }}/blog/)
-- [Kontakt]({{ site.url }}/contact/)
+- [O projekcie]({{ site.url }}/about.md)
+- [Blog]({{ site.url }}/blog.md)
+- [Kontakt]({{ site.url }}/contact.md)
 - Email: {{ site.email }}

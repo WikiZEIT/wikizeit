@@ -34,6 +34,8 @@
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 <!-- RSS -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Blog" href="{{ site.url }}/feed.xml" />
+{% assign mdHref = page.url | mdAlternate %}{% if mdHref %}<!-- Markdown alternate -->
+<link rel="alternate" type="text/markdown" title="Markdown version" href="{{ mdHref }}" />{% endif %}
 <!-- Stylesheet -->
 {% assign cssHash = "/css/style.css" | contentHash %}<link rel="stylesheet" href="{{ '/css/style.css' | url }}?v={{ cssHash }}" />
 <!-- Fonts -->

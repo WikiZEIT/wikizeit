@@ -21,9 +21,43 @@ function formatDate(date) {
 
 export default function(eleventyConfig) {
 
+    eleventyConfig.addFilter("mdAlternate", function(pageUrl) {
+        if (pageUrl === '/') return '/llms.txt';
+        const blogPost = pageUrl.match(/^\/blog\/([^/]+)\/$/);
+        if (blogPost) return `/blog/${blogPost[1]}.md`;
+        const author = pageUrl.match(/^\/autor\/([^/]+)\/$/);
+        if (author) return `/autor/${author[1]}.md`;
+        if (['/about/', '/contact/', '/blog/'].includes(pageUrl)) {
+            return pageUrl.slice(0, -1) + '.md';
+        }
+        return null;
+    });
+
     eleventyConfig.addFilter("rawMarkdown", function(inputPath) {
         const content = readFileSync(path.resolve(inputPath), 'utf-8');
         return content.replace(/^---[\s\S]*?---\n*/, '');
+    });
+
+    eleventyConfig.addFilter("markdownLinks", function(content) {
+        if (!content) return "";
+        return content.replace(
+            /\]\(((https:\/\/wikizeit\.jcubic\.pl)?(\/[^)]+))\)/g,
+            (match, fullUrl, domain, urlPath) => {
+                const d = domain || '';
+                const blogPost = urlPath.match(/^\/blog\/([^/]+)\/$/);
+                if (blogPost) {
+                    return `](${d}/blog/${blogPost[1]}.md)`;
+                }
+                const author = urlPath.match(/^\/autor\/([^/]+)\/$/);
+                if (author) {
+                    return `](${d}/autor/${author[1]}.md)`;
+                }
+                if (['/about/', '/contact/', '/blog/'].includes(urlPath)) {
+                    return `](${d}${urlPath.slice(0, -1)}.md)`;
+                }
+                return match;
+            }
+        );
     });
 
     // Passthrough copy for static assets — contents of src/static/ are copied to output root

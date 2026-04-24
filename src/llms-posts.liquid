@@ -6,4 +6,4 @@ pagination:
 permalink: "blog/{{ post.fileSlug }}.md"
 eleventyExcludeFromCollections: true
 ---
-{{ post.inputPath | rawMarkdown }}
+{{ post.inputPath | rawMarkdown | markdownLinks }}
