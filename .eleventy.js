@@ -4,6 +4,8 @@ import { createHash } from 'crypto';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import socialCard from 'eleventy-plugin-svg-social-card';
+import { minify } from 'html-minifier-next';
+import { minify as minifyJS } from 'terser';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -192,6 +194,26 @@ export default function(eleventyConfig) {
             .replace(/^-+/, "")
             .replace(/-+$/, "");
     });
+
+    const isProduction = process.env.ELEVENTY_RUN_MODE === 'build';
+
+    if (isProduction) {
+        eleventyConfig.addTransform('html-minifier-next', async function(content) {
+            if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
+                return await minify(content, {
+                    collapseWhitespace: true,
+                    conservativeCollapse: true,
+                    removeComments: true,
+                    minifyCSS: true,
+                    minifyJS: async (text) => {
+                        const result = await minifyJS(text, { compress: false });
+                        return result.code;
+                    },
+                });
+            }
+            return content;
+        });
+    }
 
     return {
         dir: {

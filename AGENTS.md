@@ -36,7 +36,9 @@ form. The `_site/` output directory is fully self-contained and deployable.
 
 ```bash
 # Build
-npm run build        # or: npx @11ty/eleventy
+npm run build
+# DO NOT run `npx @11ty/eleventy` directly — it enters watch mode and never terminates.
+# Always use `npm run build` which runs a one-shot build.
 
 # Docker (local testing)
 docker compose up -d          # start
