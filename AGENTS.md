@@ -58,6 +58,20 @@ http://localhost:8080/
 - `tmp/` — Tailwind design reference files (read-only)
 - `szkolenia/` — symlink to separate project (ignore its AGENTS.md)
 
+## llms.txt
+
+The project generates `llms.txt` and per-post markdown files for LLM consumption:
+
+- `src/llms.txt.liquid` → `_site/llms.txt` — index with project summary and links to all pages
+- `src/llms-posts.liquid` → `_site/blog/{slug}.md` — raw markdown for each blog post (via
+  pagination over the `post` collection)
+- The `rawMarkdown` filter in `.eleventy.js` reads a source file and strips its front matter
+
+**Keep in sync:** when adding, removing, or renaming blog posts, pages, or authors, update
+`src/llms.txt.liquid` so the index stays accurate. Blog post markdown files are generated
+automatically from the `post` collection; static pages and authors are listed manually in
+`llms.txt.liquid`.
+
 ## Deploy
 
 - **Dev**: push to `dev` branch → GitHub Actions builds + SCPs `_site/` to server

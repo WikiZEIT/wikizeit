@@ -1,0 +1,9 @@
+---
+pagination:
+  data: collections.post
+  size: 1
+  alias: post
+permalink: "blog/{{ post.fileSlug }}.md"
+eleventyExcludeFromCollections: true
+---
+{{ post.inputPath | rawMarkdown }}

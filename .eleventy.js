@@ -21,6 +21,11 @@ function formatDate(date) {
 
 export default function(eleventyConfig) {
 
+    eleventyConfig.addFilter("rawMarkdown", function(inputPath) {
+        const content = readFileSync(path.resolve(inputPath), 'utf-8');
+        return content.replace(/^---[\s\S]*?---\n*/, '');
+    });
+
     // Passthrough copy for static assets — contents of src/static/ are copied to output root
     eleventyConfig.addPassthroughCopy({ "src/static": "/" });
 
@@ -49,6 +54,11 @@ export default function(eleventyConfig) {
         return collectionApi.getFilteredByGlob("src/blog/posts/*.md").sort((a, b) => {
             return b.date - a.date;
         });
+    });
+
+    // Author profile collection
+    eleventyConfig.addCollection("author", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/authors/*.md");
     });
 
     // Unique tags list collection (excluding internal tags)

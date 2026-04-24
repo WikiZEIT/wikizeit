@@ -1,4 +1,28 @@
+AddCharset UTF-8 .txt .md
+AddType text/markdown .md
+
 RewriteEngine On
+
+# Content negotiation: serve markdown when Accept: text/markdown
+RewriteCond %{HTTP:Accept} text/markdown
+RewriteRule ^$ /llms.txt [L,T=text/markdown]
+
+RewriteCond %{HTTP:Accept} text/markdown
+RewriteRule ^about/?$ /about.md [L,T=text/markdown]
+
+RewriteCond %{HTTP:Accept} text/markdown
+RewriteRule ^contact/?$ /contact.md [L,T=text/markdown]
+
+RewriteCond %{HTTP:Accept} text/markdown
+RewriteRule ^blog/?$ /blog.md [L,T=text/markdown]
+
+RewriteCond %{HTTP:Accept} text/markdown
+RewriteCond %{DOCUMENT_ROOT}/blog/$1.md -f
+RewriteRule ^blog/([^/]+)/?$ /blog/$1.md [L,T=text/markdown]
+
+RewriteCond %{HTTP:Accept} text/markdown
+RewriteCond %{DOCUMENT_ROOT}/autor/$1.md -f
+RewriteRule ^autor/([^/]+)/?$ /autor/$1.md [L,T=text/markdown]
 
 # Protect sensitive files
 RewriteRule ^api/subscribers\.db$ - [R=404,L]

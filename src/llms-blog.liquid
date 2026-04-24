@@ -1,0 +1,12 @@
+---
+permalink: blog.md
+eleventyExcludeFromCollections: true
+---
+# Blog WikiZEIT
+
+Artykuły o Wikipedii, Wikidanych, danych strukturalnych i etycznym SEO.
+
+## Artykuły
+{% for post in collections.post %}
+- [{{ post.data.title }}]({{ site.url }}/blog/{{ post.fileSlug }}/): {{ post.data.description }}
+{%- endfor %}

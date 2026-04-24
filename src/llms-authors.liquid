@@ -1,0 +1,9 @@
+---
+pagination:
+  data: collections.author
+  size: 1
+  alias: author
+permalink: "autor/{{ author.data.author }}.md"
+eleventyExcludeFromCollections: true
+---
+{{ author.inputPath | rawMarkdown }}

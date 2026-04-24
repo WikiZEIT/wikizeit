@@ -1,0 +1,17 @@
+---
+permalink: contact.md
+eleventyExcludeFromCollections: true
+---
+# Kontakt — WikiZEIT
+
+Masz pytania dotyczące projektu WikiZEIT? Chętnie odpowiemy na każde z nich.
+
+## Dane kontaktowe
+
+- **Email**: {{ site.email }}
+- **Formularz kontaktowy**: [{{ site.url }}/contact/]({{ site.url }}/contact/)
+
+## Media społecznościowe
+{% for link in site.sameAs %}
+- <{{ link }}>
+{%- endfor %}

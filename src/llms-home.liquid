@@ -1,0 +1,28 @@
+---
+permalink: index.md
+eleventyExcludeFromCollections: true
+---
+# WikiZEIT — Edukacyjny projekt o Wikipedii i SEO
+
+{{ site.longDescription }}
+
+Projekt WikiZEIT wyrasta z ducha Open Source oraz wieloletniego doświadczenia
+w ekosystemie Wikipedii. Skupiamy się na dostarczaniu rzetelnej wiedzy
+o mechanizmach wolnej encyklopedii oraz promowaniu etycznych praktyk
+w pozycjonowaniu stron.
+
+Naszą misją jest demistyfikacja procesów redakcyjnych i technicznych, które
+stoją za najbardziej zaufanym źródłem informacji w internecie, przy
+jednoczesnym zachowaniu najwyższych standardów SEO.
+
+## Najnowsze artykuły
+{% for post in collections.post limit: 3 %}
+- [{{ post.data.title }}]({{ site.url }}/blog/{{ post.fileSlug }}/): {{ post.data.description }}
+{%- endfor %}
+
+## Więcej informacji
+
+- [O projekcie]({{ site.url }}/about/)
+- [Blog]({{ site.url }}/blog/)
+- [Kontakt]({{ site.url }}/contact/)
+- Email: {{ site.email }}
